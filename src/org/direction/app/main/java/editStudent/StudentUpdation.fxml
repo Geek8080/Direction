@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root" prefHeight="657.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.editStudent.StudentUpdationController">
+   <children>
+      <AnchorPane fx:id="updateStudentRoot" prefHeight="684.0" prefWidth="608.0">
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="159.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/student.png" />
+               </image>
+            </ImageView>
+            <Text fill="#0079ff" layoutX="259.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Student" wrappingWidth="233.951171875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" layoutY="176.0" prefHeight="401.0" prefWidth="577.0">
+               <content>
+                  <VBox fx:id="rootForm" prefHeight="934.0" prefWidth="562.0" spacing="40.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="139.0" prefWidth="562.0" spacing="40.0">
+                           <children>
+                              <AnchorPane prefHeight="24.0" prefWidth="562.0" />
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="user" editable="false" focusTraversable="false" labelFloat="true" mouseTransparent="true" prefHeight="34.0" prefWidth="275.0" promptText="User" text="Value">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="event" editable="false" focusTraversable="false" labelFloat="true" mouseTransparent="true" prefHeight="34.0" prefWidth="265.0" promptText="Event" text="Value">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="sid" editable="false" focusTraversable="false" labelFloat="true" mouseTransparent="true" prefHeight="34.0" prefWidth="545.0" promptText="SID" text="Value">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_RIGHT" prefHeight="714.0" prefWidth="562.0" spacing="40.0">
+                           <children>
+                              <JFXTextField fx:id="name" alignment="CENTER" labelFloat="true" prefHeight="34.0" prefWidth="545.0" promptText="Name">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="age" alignment="CENTER" labelFloat="true" prefHeight="34.0" prefWidth="545.0" promptText="Age">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="cls" alignment="CENTER" labelFloat="true" layoutX="10.0" layoutY="84.0" prefHeight="34.0" prefWidth="545.0" promptText="Class">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Text fx:id="sidValue" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="149.205078125">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox spacing="100.0">
+                                       <children>
+                                          <JFXRadioButton fx:id="male" selected="true" text="Male" textFill="#111111">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="gender" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="female" text="Female" textFill="#111111" toggleGroup="$gender" />
+                                          <JFXRadioButton fx:id="others" text="Others" textFill="#111111" toggleGroup="$gender" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <JFXTextField fx:id="marks" alignment="CENTER" labelFloat="true" layoutX="10.0" layoutY="84.0" prefHeight="34.0" prefWidth="545.0" promptText="Marks">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="contact" alignment="CENTER" labelFloat="true" layoutX="10.0" layoutY="84.0" prefHeight="34.0" prefWidth="545.0" promptText="Contact">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="parentName" alignment="CENTER" labelFloat="true" layoutX="10.0" layoutY="84.0" prefHeight="34.0" prefWidth="545.0" promptText="Parent's Name">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="parentContact" alignment="CENTER" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="545.0" promptText="Parent's Contact">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextArea fx:id="address" labelFloat="true" prefHeight="126.0" prefWidth="562.0" promptText="Address" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Separator layoutX="-1.0" layoutY="157.0" prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #0079FF;" />
+            <VBox layoutX="21.0" layoutY="598.0" prefHeight="49.0" prefWidth="556.0" spacing="40.0">
+               <children>
+                  <HBox spacing="30.0">
+                     <children>
+                        <JFXButton fx:id="cancel" onMouseClicked="#cancel" prefHeight="44.0" prefWidth="272.0" text="CANCEL">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="update" layoutX="10.0" layoutY="10.0" onMouseClicked="#update" prefHeight="44.0" prefWidth="254.0" text="UPDATE">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
