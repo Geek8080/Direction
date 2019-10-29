@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.login.LoginController">
+   <children>
+      <AnchorPane fx:id="loginRoot" prefHeight="377.0" prefWidth="600.0" StackPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="uname" alignment="CENTER" labelFloat="true" layoutX="38.0" layoutY="172.0" prefHeight="31.0" prefWidth="524.0" promptText="Username">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" alignment="CENTER" labelFloat="true" layoutX="38.0" layoutY="269.0" prefHeight="31.0" prefWidth="524.0" promptText="Password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fitHeight="123.0" fitWidth="122.0" layoutX="239.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/login.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="login" focusTraversable="false" layoutX="465.0" layoutY="327.0" onMouseClicked="#loginAction" text="Login" />
+            <Hyperlink fx:id="signupLink" focusTraversable="false" layoutX="38.0" layoutY="328.0" onMouseClicked="#launchSignup" prefHeight="29.0" prefWidth="200.0" text="Get an account...Click here..." />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

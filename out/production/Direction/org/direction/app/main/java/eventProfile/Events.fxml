@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="root" prefHeight="507.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.eventProfile.EventsController">
+   <children>
+      <AnchorPane fx:id="eventsRoot" prefHeight="540.0" prefWidth="720.0">
+         <children>
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="381.0" prefWidth="660.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <columns>
+                  <TableColumn fx:id="eidCol" editable="false" prefWidth="75.0" text="EID" />
+                  <TableColumn fx:id="locationCol" editable="false" prefWidth="197.0" text="Location" />
+                  <TableColumn fx:id="dateCol" editable="false" prefWidth="169.0" text="Date" />
+                  <TableColumn fx:id="budgetCol" editable="false" prefWidth="96.0" text="Budget" />
+                  <TableColumn fx:id="attendanceCol" editable="false" prefWidth="122.0" text="Attendance" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="119.0" layoutY="436.0" onMouseClicked="#close" prefHeight="40.0" prefWidth="73.0" text="Close" />
+            <JFXButton layoutX="552.0" layoutY="432.0" onAction="#clicked" prefHeight="40.0" prefWidth="138.0" text="Okay" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

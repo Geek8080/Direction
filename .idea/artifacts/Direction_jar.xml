@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Direction:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Direction_jar</output-path>
+    <root id="archive" name="Direction.jar">
+      <element id="module-output" name="Direction" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/org/direction/app/main/resources/h2-1.4.197.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
