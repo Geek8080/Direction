@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.editStudent.StudentsListController">
+<StackPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.editStudent.StudentsListController">
    <children>
       <AnchorPane fx:id="studentsListRoot" prefHeight="720.0" prefWidth="1280.0">
          <children>
@@ -21,8 +21,8 @@
                   <TableColumn fx:id="contactCol" editable="false" minWidth="0.0" prefWidth="237.0" text="Contact" />
                </columns>
             </TableView>
-            <JFXButton fx:id="close" layoutX="205.0" layoutY="652.0" onMouseClicked="#close" prefHeight="43.0" prefWidth="84.0" text="Close" />
-            <JFXButton fx:id="action" layoutX="1058.0" layoutY="644.0" onMouseClicked="#edit" prefHeight="43.0" prefWidth="182.0" text="Edit Selected Student" />
+            <JFXButton fx:id="close" layoutX="205.0" layoutY="652.0" onMouseClicked="#close" prefHeight="43.0" prefWidth="84.0" styleClass="mbutton" text="Close" />
+            <JFXButton fx:id="action" layoutX="1058.0" layoutY="644.0" onMouseClicked="#edit" prefHeight="43.0" prefWidth="182.0" styleClass="mbutton" text="Edit Selected Student" />
          </children>
       </AnchorPane>
    </children>

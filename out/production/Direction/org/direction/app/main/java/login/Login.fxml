@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.login.LoginController">
+<StackPane fx:id="root" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.login.LoginController">
    <children>
       <AnchorPane fx:id="loginRoot" prefHeight="377.0" prefWidth="600.0" StackPane.alignment="CENTER">
          <children>
@@ -29,7 +29,7 @@
                   <Image url="@../../resources/login.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="login" focusTraversable="false" layoutX="465.0" layoutY="327.0" onMouseClicked="#loginAction" text="Login" />
+            <JFXButton fx:id="login" focusTraversable="false" layoutX="465.0" layoutY="327.0" onMouseClicked="#loginAction" styleClass="mbutton" text="Login" />
             <Hyperlink fx:id="signupLink" focusTraversable="false" layoutX="38.0" layoutY="328.0" onMouseClicked="#launchSignup" prefHeight="29.0" prefWidth="200.0" text="Get an account...Click here..." />
          </children>
       </AnchorPane>
