@@ -14,11 +14,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.home.HomeController">
+<StackPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.home.HomeController">
    <children>
-      <ScrollPane fx:id="rootScroll" hbarPolicy="NEVER" prefHeight="720.0" prefWidth="1280.0">
+      <ScrollPane fx:id="rootScroll" hbarPolicy="NEVER" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPanes">
         <content>
-          <AnchorPane fx:id="homeRoot" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0">
+          <AnchorPane fx:id="homeRoot" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPanes">
                <children>
                   <HBox>
                      <children>
@@ -26,7 +26,7 @@
                            <children>
                               <VBox prefHeight="720.0" prefWidth="384.0">
                                  <children>
-                                    <Pane fx:id="welcomePane" prefHeight="222.0" prefWidth="384.0">
+                                    <Pane fx:id="welcomePane" prefHeight="222.0" prefWidth="384.0" styleClass="rootPanes">
                                        <children>
                                           <Text fx:id="welcome" layoutX="111.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
                                              <font>
@@ -35,14 +35,14 @@
                                           </Text>
                                        </children>
                                     </Pane>
-                                    <Pane fx:id="buttonPane" prefHeight="393.0" prefWidth="384.0">
+                                    <Pane fx:id="buttonPane" prefHeight="393.0" prefWidth="384.0" styleClass="rootPanes">
                                        <children>
-                                          <VBox alignment="CENTER" layoutY="14.0" spacing="50.0">
+                                          <VBox alignment="CENTER" layoutY="14.0" spacing="50.0" styleClass="rootPanes">
                                              <children>
                                                 <HBox prefHeight="60.0" prefWidth="384.0">
                                                    <children>
                                                       <Label fx:id="studentsLabel" prefHeight="60.0" prefWidth="24.0" style="-fx-background-color: #FF0000;" />
-                                                      <JFXButton fx:id="students" focusTraversable="false" onMouseClicked="#showStudentPane" prefHeight="60.0" prefWidth="374.0" stylesheets="@../resources/LightTheme.css" text="Students">
+                                                      <JFXButton fx:id="students" focusTraversable="false" onMouseClicked="#showStudentPane" prefHeight="60.0" prefWidth="374.0" styleClass="sidebutton" stylesheets="@../resources/LightTheme.css" text="Students">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
@@ -52,7 +52,7 @@
                                                 <HBox prefHeight="60.0" prefWidth="384.0">
                                                    <children>
                                                       <Label fx:id="eventsLabel" prefHeight="60.0" prefWidth="24.0" style="-fx-background-color: #00FF00;" />
-                                                      <JFXButton fx:id="events" focusTraversable="false" onMouseClicked="#showEventsPane" prefHeight="60.0" prefWidth="374.0" stylesheets="@../resources/LightTheme.css" text="Events">
+                                                      <JFXButton fx:id="events" focusTraversable="false" onMouseClicked="#showEventsPane" prefHeight="60.0" prefWidth="374.0" styleClass="sidebutton" stylesheets="@../resources/LightTheme.css" text="Events">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
@@ -62,7 +62,7 @@
                                                 <HBox prefHeight="60.0" prefWidth="384.0">
                                                    <children>
                                                       <Label fx:id="updateRecordsLabel" prefHeight="60.0" prefWidth="24.0" style="-fx-background-color: #0000FF;" />
-                                                      <JFXButton fx:id="updateRecords" focusTraversable="false" onMouseClicked="#showUpdatePane" prefHeight="60.0" prefWidth="374.0" stylesheets="@../resources/LightTheme.css" text="Update Records">
+                                                      <JFXButton fx:id="updateRecords" focusTraversable="false" onMouseClicked="#showUpdatePane" prefHeight="60.0" prefWidth="374.0" styleClass="sidebutton" stylesheets="@../resources/LightTheme.css" text="Update Records">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
@@ -75,7 +75,7 @@
                                     </Pane>
                                     <Pane prefHeight="104.0" prefWidth="371.0">
                                        <children>
-                                          <VBox fx:id="footer" layoutX="7.0" layoutY="-3.0" prefHeight="104.0" prefWidth="371.0">
+                                          <VBox fx:id="footer" layoutX="7.0" layoutY="-3.0" prefHeight="104.0" prefWidth="371.0" styleClass="rootPanes">
                                              <children>
                                                 <HBox prefHeight="45.0" prefWidth="371.0">
                                                    <children>
@@ -115,9 +115,8 @@
                         </Pane>
                         <StackPane>
                            <children>
-                              <Pane fx:id="studentPane" prefHeight="720.0" prefWidth="892.0">
+                              <Pane fx:id="studentPane" prefHeight="720.0" prefWidth="892.0" styleClass="rootPanes">
                                  <children>
-                                    <Label layoutX="833.0" layoutY="685.0" text="Pane 1" />
                                     <Text fx:id="studentTitle" fill="#0079ff" layoutX="95.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students">
                                        <font>
                                           <Font size="36.0" />
@@ -129,7 +128,7 @@
                                           <Image url="@../../resources/student.png" />
                                        </image>
                                     </ImageView>
-                                    <JFXButton fx:id="addStudent" focusTraversable="false" layoutX="113.0" layoutY="317.0" onMouseClicked="#launchAddStudent" prefHeight="87.0" prefWidth="203.0" text="Add Student">
+                                    <JFXButton fx:id="addStudent" focusTraversable="false" layoutX="113.0" layoutY="317.0" onMouseClicked="#launchAddStudent" prefHeight="87.0" prefWidth="203.0" styleClass="homeButton" text="Add Student">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -141,7 +140,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton fx:id="studentDetails" focusTraversable="false" layoutX="568.0" layoutY="317.0" onMouseClicked="#launchStudentDetails" prefHeight="87.0" prefWidth="211.0" text="Student Details">
+                                    <JFXButton fx:id="studentDetails" focusTraversable="false" layoutX="568.0" layoutY="317.0" onMouseClicked="#launchStudentDetails" prefHeight="87.0" prefWidth="211.0" styleClass="homeButton" text="Student Details">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -155,9 +154,8 @@
                                     </JFXButton>
                                  </children>
                               </Pane>
-                              <Pane fx:id="eventPane" prefHeight="720.0" prefWidth="892.0" visible="false">
+                              <Pane fx:id="eventPane" prefHeight="720.0" prefWidth="892.0" styleClass="rootPanes" visible="false">
                                  <children>
-                                    <Label layoutX="833.0" layoutY="685.0" text="Pane 2" />
                                     <Text fx:id="eventTitle" fill="#0079ff" layoutX="99.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Events">
                                        <font>
                                           <Font size="36.0" />
@@ -169,7 +167,7 @@
                                           <Image url="@../../resources/event.png" />
                                        </image>
                                     </ImageView>
-                                    <JFXButton fx:id="addEvent" focusTraversable="false" layoutX="120.0" layoutY="317.0" onMouseClicked="#launchAddUpcomingEvent" prefHeight="87.0" prefWidth="179.0" text="Add Event">
+                                    <JFXButton fx:id="addEvent" focusTraversable="false" layoutX="120.0" layoutY="317.0" onMouseClicked="#launchAddUpcomingEvent" prefHeight="87.0" prefWidth="179.0" styleClass="homeButton" text="Add Event">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -181,7 +179,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton fx:id="pastEvent" focusTraversable="false" layoutX="594.0" layoutY="317.0" onMouseClicked="#launchPastEvents" prefHeight="87.0" prefWidth="179.0" text="Past Events">
+                                    <JFXButton fx:id="pastEvent" focusTraversable="false" layoutX="594.0" layoutY="317.0" onMouseClicked="#launchPastEvents" prefHeight="87.0" prefWidth="179.0" styleClass="homeButton" text="Past Events">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -195,13 +193,8 @@
                                     </JFXButton>
                                  </children>
                               </Pane>
-                              <Pane fx:id="updateRecordPane" prefHeight="720.0" prefWidth="892.0" visible="false">
+                              <Pane fx:id="updateRecordPane" prefHeight="720.0" prefWidth="892.0" styleClass="rootPanes" visible="false">
                                  <children>
-                                    <Label layoutX="839.0" layoutY="687.0" text="Pane 3">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                    </Label>
                                     <Text fx:id="updateRecordTitle" fill="#0079ff" layoutX="100.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Records">
                                        <font>
                                           <Font size="36.0" />
@@ -213,7 +206,7 @@
                                           <Image url="@../../resources/updateRecords.png" />
                                        </image>
                                     </ImageView>
-                                    <JFXButton fx:id="updateEventRecord" focusTraversable="false" layoutX="102.0" layoutY="207.0" onMouseClicked="#launchEvent" prefHeight="87.0" prefWidth="274.0" text="Update Event Records">
+                                    <JFXButton fx:id="updateEventRecord" focusTraversable="false" layoutX="102.0" layoutY="207.0" onMouseClicked="#launchEvent" prefHeight="87.0" prefWidth="274.0" styleClass="homeButton" text="Update Event Records">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -225,7 +218,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton fx:id="updateUpcomingEvent" focusTraversable="false" layoutX="506.0" layoutY="204.0" onMouseClicked="#launchUpcomingEvent" prefHeight="87.0" prefWidth="290.0" text="Update Upcoming Event">
+                                    <JFXButton fx:id="updateUpcomingEvent" focusTraversable="false" layoutX="506.0" layoutY="204.0" onMouseClicked="#launchUpcomingEvent" prefHeight="87.0" prefWidth="290.0" styleClass="homeButton" text="Update Upcoming Event">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -237,7 +230,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton fx:id="updateStudentDetail" focusTraversable="false" layoutX="100.0" layoutY="429.0" onMouseClicked="#launchUpdateStudent" prefHeight="87.0" prefWidth="279.0" text="Update Student Details">
+                                    <JFXButton fx:id="updateStudentDetail" focusTraversable="false" layoutX="100.0" layoutY="429.0" onMouseClicked="#launchUpdateStudent" prefHeight="87.0" prefWidth="279.0" styleClass="homeButton" text="Update Student Details">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -249,7 +242,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton fx:id="updatePersonalDetail" focusTraversable="false" layoutX="509.0" layoutY="429.0" onMouseClicked="#launchUpdatePersonalDetails" prefHeight="87.0" prefWidth="284.0" text="Update Personal Details">
+                                    <JFXButton fx:id="updatePersonalDetail" focusTraversable="false" layoutX="509.0" layoutY="429.0" onMouseClicked="#launchUpdatePersonalDetails" prefHeight="87.0" prefWidth="284.0" styleClass="homeButton" text="Update Personal Details">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                              <image>

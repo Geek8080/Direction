@@ -14,15 +14,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" prefHeight="562.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.studentProfile.StudentProfileController">
+<StackPane fx:id="root" prefHeight="562.0" prefWidth="1000.0" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.studentProfile.StudentProfileController">
    <children>
       <AnchorPane fx:id="studentProfileRoot" prefHeight="659.0" prefWidth="1000.0">
          <children>
-            <ScrollPane hbarPolicy="NEVER" layoutX="43.0" layoutY="164.0" prefHeight="317.0" prefWidth="931.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="43.0" layoutY="164.0" prefHeight="317.0" prefWidth="931.0" styleClass="rootPanes">
                <content>
-                  <AnchorPane prefHeight="575.0" prefWidth="915.0">
+                  <AnchorPane prefHeight="575.0" prefWidth="915.0" styleClass="rootPanes">
                      <children>
-                        <HBox layoutY="20.0" prefHeight="541.0" prefWidth="917.0" spacing="80.0">
+                        <HBox layoutY="20.0" prefHeight="541.0" prefWidth="917.0" spacing="80.0" styleClass="rootPanes">
                            <children>
                               <VBox spacing="40.0">
                                  <children>
@@ -109,7 +109,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <JFXButton fx:id="okay" focusTraversable="false" layoutX="638.0" layoutY="495.0" onMouseClicked="#okay" prefHeight="45.0" prefWidth="338.0" text="Okay">
+            <JFXButton fx:id="okay" focusTraversable="false" layoutX="638.0" layoutY="495.0" onMouseClicked="#okay" prefHeight="45.0" prefWidth="338.0" styleClass="mbutton" text="Okay">
                <font>
                   <Font size="20.0" />
                </font>

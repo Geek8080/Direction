@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.editStudent.EventTypeController">
+<StackPane fx:id="root" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.editStudent.EventTypeController">
    <children>
       <AnchorPane fx:id="rootEventType" prefHeight="150.0" prefWidth="500.0">
          <children>
-            <JFXButton fx:id="upcoming" focusTraversable="false" layoutX="39.0" layoutY="53.0" onMouseClicked="#upcoming" text="Upcoming Event">
+            <JFXButton fx:id="upcoming" focusTraversable="false" layoutX="39.0" layoutY="53.0" onMouseClicked="#upcoming" styleClass="mbutton" text="Upcoming Event">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="completed" focusTraversable="false" layoutX="282.0" layoutY="53.0" onMouseClicked="#complete" text="Completed Event">
+            <JFXButton fx:id="completed" focusTraversable="false" layoutX="282.0" layoutY="53.0" onMouseClicked="#complete" styleClass="mbutton" text="Completed Event">
                <font>
                   <Font size="20.0" />
                </font>

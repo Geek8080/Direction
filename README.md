@@ -19,4 +19,4 @@ The application has front-end in javafx, back-end in java and H2 is used for sav
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
- 
+

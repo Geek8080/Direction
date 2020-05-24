@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" prefHeight="781.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.addStudent.AddStudentController">
+<StackPane fx:id="root" prefHeight="781.0" prefWidth="608.0" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.addStudent.AddStudentController">
    <children>
-      <AnchorPane fx:id="addStudentRoot" prefHeight="1156.0" prefWidth="600.0">
+      <AnchorPane fx:id="addStudentRoot" prefHeight="1156.0" prefWidth="600.0" stylesheets="@../resources/LightTheme.css">
          <children>
             <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="159.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,9 +30,9 @@
                   <Font size="28.0" />
                </font>
             </Text>
-            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" layoutY="176.0" prefHeight="401.0" prefWidth="577.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" layoutY="176.0" prefHeight="401.0" prefWidth="577.0" styleClass="rootPanes">
                <content>
-                  <VBox fx:id="rootForm" prefHeight="934.0" prefWidth="562.0" spacing="40.0">
+                  <VBox fx:id="rootForm" prefHeight="934.0" prefWidth="562.0" spacing="40.0" styleClass="rootPanes">
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="139.0" prefWidth="562.0" spacing="40.0">
                            <children>
@@ -125,19 +125,19 @@
             <Separator layoutX="-1.0" layoutY="157.0" prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #0079FF;" />
             <VBox layoutX="21.0" layoutY="598.0" prefHeight="163.0" prefWidth="556.0" spacing="40.0">
                <children>
-                  <JFXButton fx:id="add" onMouseClicked="#add" prefHeight="44.0" prefWidth="554.0" text="ADD">
+                  <JFXButton fx:id="add" onMouseClicked="#add" prefHeight="44.0" prefWidth="554.0" styleClass="mbutton" text="ADD">
                      <font>
                         <Font name="Segoe UI" size="20.0" />
                      </font>
                   </JFXButton>
                   <HBox spacing="30.0">
                      <children>
-                        <JFXButton fx:id="cancel" onMouseClicked="#cancel" prefHeight="44.0" prefWidth="272.0" text="CANCEL">
+                        <JFXButton fx:id="cancel" onMouseClicked="#cancel" prefHeight="44.0" prefWidth="272.0" styleClass="mbutton" text="CANCEL">
                            <font>
                               <Font name="Segoe UI" size="20.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="addNext" layoutX="10.0" layoutY="10.0" onMouseClicked="#addNext" prefHeight="44.0" prefWidth="254.0" text="ADD NEXT">
+                        <JFXButton fx:id="addNext" layoutX="10.0" layoutY="10.0" onMouseClicked="#addNext" prefHeight="44.0" prefWidth="254.0" styleClass="mbutton" text="ADD NEXT">
                            <font>
                               <Font name="Segoe UI" size="20.0" />
                            </font>
