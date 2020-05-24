@@ -4,24 +4,23 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class FileHandler {
-    private static final String dir = "/Direction/Data/";
-    private static String res = dir;
+    //private static final String dir = "Direction/Data/";
+    //private static String res = dir;
 
     public static boolean fileExists(String fileName){
-        File file = new File(dir+fileName.trim());
+        File file = new File(fileName.trim());
         return file.exists();
     }
 
     public static String readFile(String file) throws Exception{
         String text = "", line;
-        res = dir+file;
 
         if(!fileExists(file)){
             throw new Exception("The " + file + " does not exists...");
         }
 
         try {
-            FileReader fileReader = new FileReader(res);
+            FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) {
@@ -38,9 +37,9 @@ public class FileHandler {
     }
 
     public static Object inflate(String file){
-        res = dir + file;
+
         try{
-            ObjectInputStream is = new ObjectInputStream(new FileInputStream(res));
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream(file));
             return is.readObject();
         }catch(Exception ex){
             ex.printStackTrace();
@@ -66,14 +65,13 @@ public class FileHandler {
     }
 
     public static boolean deflate(String file,Object object){
-        res = dir+file;
-        if(!new File(res).exists()){
+        if(!new File(file).exists()){
             System.out.println("Files does not exists... Making the directories");
             makeit(file);
         }
         try{
-            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(res));
-            System.out.println(new File(res).getAbsoluteFile());
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(file));
+            System.out.println(new File(file).getAbsoluteFile());
             os.writeObject(object);
             os.close();
             return true;

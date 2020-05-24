@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.signup.SignupController">
+<StackPane fx:id="root" styleClass="rootPanes" stylesheets="@../resources/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.direction.app.main.java.signup.SignupController">
    <children>
       <AnchorPane fx:id="signupRoot" prefHeight="670.0" prefWidth="600.0" StackPane.alignment="CENTER">
          <children>
@@ -45,7 +45,7 @@
                   <Image url="@../../resources/login.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="cancel" focusTraversable="false" layoutX="377.0" layoutY="614.0" onMouseClicked="#close" text="Cancel" />
+            <JFXButton fx:id="cancel" focusTraversable="false" layoutX="377.0" layoutY="614.0" onMouseClicked="#close" styleClass="mbutton" text="Cancel" />
             <Text layoutX="47.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UID:">
                <font>
                   <Font size="18.0" />
@@ -68,7 +68,7 @@
                </font>
             </Text>
             <Separator layoutX="-3.0" layoutY="245.0" prefHeight="0.0" prefWidth="600.0" />
-            <JFXButton fx:id="signup" focusTraversable="false" layoutX="487.0" layoutY="614.0" onMouseClicked="#signup" text="Signup" />
+            <JFXButton fx:id="signup" focusTraversable="false" layoutX="487.0" layoutY="614.0" onMouseClicked="#signup" styleClass="mbutton" text="Signup" />
          </children>
       </AnchorPane>
    </children>

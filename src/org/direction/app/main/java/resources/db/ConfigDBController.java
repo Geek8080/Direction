@@ -69,6 +69,7 @@ public class ConfigDBController {
             stage.show();
             ((Stage)root.getScene().getWindow()).close();
             System.out.println("After closing scene...");
+
             Main.dbServer = new DatabaseHandler();
             HomeController controller = loader.getController();
             DatabaseHandler.ServerIP = getSystemIPAddress();
